@@ -1,0 +1,13 @@
+class <%= "Create#{name.capitalize}s" %> < HanaRecord::Migrations
+  def up
+    create_table :<%= name.downcase %>s do |t|
+    <%- model.each do |key, value| -%>
+      t.<%= value %> :<%= key %>
+    <%- end -%>
+    end
+  end
+
+  def down
+    drop_table :<%= name.downcase %>s
+  end
+end
