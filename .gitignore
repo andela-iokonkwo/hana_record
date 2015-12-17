@@ -7,3 +7,6 @@
 /pkg/
 /spec/reports/
 /tmp/
+hana_record-0.1.0.gem
+app
+db
